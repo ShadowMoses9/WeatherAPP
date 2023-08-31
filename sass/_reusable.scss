@@ -1,0 +1,143 @@
+@import "var";
+@import "base";
+
+.mini-icon {
+  font-size: 2rem;
+  align-self: center;
+}
+
+.desc {
+  z-index: 100;
+  font-size: inherit;
+  font-weight: $weight-bold;
+  font-size: 1.3rem;
+}
+
+.btn-primary {
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: $color-secondary;
+  border-radius: 10rem;
+  color: $color-on-primary;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  &:is(:focus, :focus-visible) {
+    outline: none;
+  }
+}
+
+.has-state {
+  position: relative;
+  color: inherit;
+
+  &:hover {
+    box-shadow: $color-secondary;
+
+    &::before {
+      background-color: $color-secondary-light;
+    }
+  }
+  &:is(:focus, :focus-visible) {
+    box-shadow: none;
+
+    &::before {
+      background-color: $color-secondary-light;
+      animation: ripple 0.5s ease forwards;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    clip-path: circle(100% at 50% 50%);
+    transition: all 1s;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  display: none;
+}
+.colored {
+  padding: 0.5rem 1rem;
+  border-radius: 10rem;
+  &-good {
+    background-color: $color-green;
+  }
+  &-moderate {
+    background-color: $color-yellow;
+  }
+  &-bad {
+    background-color: $color-red;
+  }
+}
+
+.icon-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  padding: 2rem;
+  background-color: $color-secondary;
+  border-radius: 2rem;
+  box-shadow: $card-box-shadow;
+
+  &-title {
+    font-size: 2rem;
+  }
+
+  &-icon {
+    &-lg {
+      font-size: 8rem;
+    }
+    &-md {
+      font-size: 6rem;
+    }
+    &-sm {
+      font-size: 4rem;
+    }
+  }
+  &-temp {
+    font-size: 6rem;
+  }
+  &-desc {
+    &-vs {
+      font-size: 1.4rem;
+    }
+    &-sm {
+      font-size: 1.6rem;
+    }
+    &-md {
+      font-size: 2rem;
+    }
+    &-lg {
+      font-size: 3rem;
+    }
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  &-sm {
+    background-color: $color-tertiary;
+    border-radius: inherit;
+    box-shadow: $card-sm-box-shadow;
+    padding: 1rem;
+  }
+  &-num {
+    font-size: 4rem;
+  }
+}

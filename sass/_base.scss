@@ -1,0 +1,25 @@
+@import "var";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $main-font-size;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $main-font-family;
+  background-color: $color-primary;
+  font-weight: $weight-normal;
+  color: $color-on-primary;
+}
+
+ul {
+  list-style-type: none;
+}
