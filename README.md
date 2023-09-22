@@ -1,2 +1,2 @@
 # WeatherAPP
-My first weatherAPP
+My first Weather Application,made for learning purpose. 
